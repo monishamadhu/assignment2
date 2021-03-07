@@ -11,10 +11,9 @@ public class CDAccount extends BankAccount {
 		this.offering=offering;
 	}
 	public double getBalance() {
-		return super.getBalance();
+		return this.balance;
 	}
 	public double getInterestRate() {
-		
 		return this.offering.getInterestRate();
 	}
 	public int getTerm() {
@@ -31,7 +30,7 @@ public class CDAccount extends BankAccount {
 		return this.futureValue();
 	}
 	
-	//private double balance;
+	private double balance;
 	private CDOffering offering;
 
 }

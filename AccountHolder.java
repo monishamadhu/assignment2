@@ -38,13 +38,13 @@ public class AccountHolder {
 		CheckingAccount checking=null;
 		if((getSavingsBalance()+getCheckingBalance()+openingBalance)<250000) {
 			checking= new CheckingAccount(openingBalance);
-			checkingAccList.add(checking);
+			this.checkingAccList.add(checking);
 		} 
 		return checking;
 	}
 	public CheckingAccount addCheckingAccount(CheckingAccount checkingAccount) {
 		if((getSavingsBalance()+getCheckingBalance()+checkingAccount.getBalance())<250000) {
-			checkingAccList.add(checkingAccount);
+			this.checkingAccList.add(checkingAccount);
 			return checkingAccount;
 		} else {
 			return null;
@@ -115,12 +115,12 @@ public class AccountHolder {
 	public CDAccount addCDAccount(CDOffering offering, double openingBalance) {
 		
 		CDAccount cd=new CDAccount(offering,openingBalance);
-		cdAccList.add(cd);
+		this.cdAccList.add(cd);
 		return cd;
 	}
 	
 	public CDAccount addCDAccount(CDAccount cdAccount) {
-		cdAccList.add(cdAccount);
+		this.cdAccList.add(cdAccount);
 		return cdAccount;
 	}
 	
