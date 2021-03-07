@@ -7,7 +7,7 @@ public class CDAccount extends BankAccount {
 	public CDAccount(CDOffering offering, double balance) {
 		super(MeritBank.getNextAccountNumber(), balance, offering.getInterestRate());
 		
-		//this.balance=balance;
+		this.balance=balance;
 		this.offering=offering;
 	}
 	public double getBalance() {
